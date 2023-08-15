@@ -1,0 +1,184 @@
+/* Main Setting */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Main Var */
+:root {
+  --Main-Color: #9c27b0;
+  --Second-Color: #ba68c8;
+  --Bc: #eee;
+  --Text-Color: #fff;
+}
+
+/* Full Container */
+.game {
+  min-height: 100vh;
+  background-color: var(--Bc);
+}
+
+/* Name Game */
+.name {
+  background-color: var(--Main-Color);
+  padding: 20px;
+  color: var(--Text-Color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Select Level */
+.select-lvl {
+  padding: 5px;
+  margin: 3px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  height: 100%;
+  border: 2px solid var(--Second-Color);
+  cursor: pointer;
+  height: 80px;
+  border-radius: 8px;
+}
+.select-lvl option:hover {
+  background-color: var(--Main-Color);
+}
+.select-lvl.no-event{
+  pointer-events: none;
+}
+.choose {
+  background-color: var(--Text-Color);
+  display: block;
+  margin: 3px;
+  padding: 7px;
+  border: 2px solid var(--Main-Color);
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.choose:hover {
+  background-color: var(--Bc);
+}
+/* Inner Container */
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+
+/* Message Div */
+.container .message {
+  background-color: var(--Text-Color);
+  padding: 15px;
+  margin: 15px 0px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Span In Message */
+.container .message span {
+  font-weight: bold;
+  color: var(--Second-Color);
+}
+
+.container .message span::before {
+  content: "[ ";
+}
+.container .message span::after {
+  content: " ]";
+}
+
+/* Start Button */
+.container .start {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--Second-Color);
+  color: var(--Text-Color);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  pointer-events: none;
+}
+.container .start.active{
+  pointer-events: all;
+}
+/* Word */
+.container .the-word {
+  text-align: center;
+  color: var(--Main-Color);
+  font-size: 60px;
+  user-select: none;
+  font-weight: bold;
+}
+
+/* Input Text */
+.container .input {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  border: 3px solid var(--Main-Color);
+  border-radius: 6px;
+  font-size: 20px;
+  margin: 15px 0 ;
+  caret-color: var(--Main-Color);
+}
+.container .input:focus {
+  outline: none;
+}
+
+/* Upcoming Words */
+.container .upcoming-words {
+  background-color: var(--Text-Color);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.container .upcoming-words div {
+  background-color: var(--Main-Color);
+  padding: 10px;
+  margin: 4px;
+  color: var(--Text-Color);
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* Control Div */
+.container .control {
+  background-color: var(--Text-Color);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.container .control span {
+  color: var(--Second-Color);
+  font-weight: bold;
+}
+
+/* Finish */
+.container .finish {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  padding: 15px;
+}
+.container .finish .good {
+  color: var(--Main-Color);
+}
+.container .finish .bad {
+  color: red;
+}
